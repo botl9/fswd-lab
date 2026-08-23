@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <style>
+        .dark-theme { background: #474747; color: #dbdbdb; }
+        .card { border: 1px solid #aaa; padding: 10px; margin: 10px; }
+        #gallery { display: grid; grid-template-columns: repeat(2, 1fr); }
+    </style>
+</head>
+<body>
+
+    <h1>Mohammed Ufraan - Projects</h1>
+
+    <button id="themeToggle">Toggle Theme</button>
+    <button id="addProject">Add Project</button>
+    <input id="search" placeholder="Search projects">
+
+    <div id="gallery"></div>
+
+    <script>
+        const gallery = document.querySelector("#gallery");
+        const themeToggle = document.querySelector("#themeToggle");
+        const addProject = document.querySelector("#addProject");
+        const search = document.querySelector("#search");
+
+        let projects = [
+            { title: "Holo", description: "Peer-to-peer file sharing." },
+            { title: "Jpeg Go", description: "JPEG encoder and decoder in Go." },
+            { title: "Toraje", description: "Private file-sharing application." }
+        ];
+
+        function renderProjects(list = projects) {
+            gallery.innerHTML = "";
+            list.forEach((project, index) => {
+                const card = document.createElement("article");
+                card.className = "card";
+                card.innerHTML = `<h2>${project.title}</h2>
+                    <p>${project.description}</p>
+                    <button>Remove</button>`;
+
+                card.querySelector("button").onclick = () => {
+                    projects.splice(index, 1);
+                    renderProjects();
+                };
+
+                gallery.appendChild(card);
+            });
+        }
+
+        addProject.onclick = () => {
+            projects.push({
+                title: "New Project",
+                description: "A newly added project."
+            });
+            renderProjects();
+        };
+
+        themeToggle.onclick = () => {
+            document.body.classList.toggle("dark-theme");
+            sessionStorage.setItem(
+                "theme",
+                document.body.classList.contains("dark-theme") ? "dark" : "light"
+            );
+        };
+
+        if (sessionStorage.getItem("theme") === "dark")
+            document.body.classList.add("dark-theme");
+
+        search.oninput = () => {
+            const query = search.value.toLowerCase();
+            renderProjects(projects.filter(p =>
+                p.title.toLowerCase().includes(query)
+            ));
+        };
+
+        renderProjects();
+
+        if (new URLSearchParams(location.search).has("demo")) {
+            document.body.classList.add("dark-theme");
+            addProject.click();
+            const firstCard = gallery.querySelector("article");
+            if (firstCard) firstCard.querySelector("button").click();
+        }
+    </script>
+
+</body>
+</html>

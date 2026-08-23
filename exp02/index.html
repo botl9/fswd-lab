@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio with External CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mohammed Ufraan</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>CSE student at LIET Hyderabad interested in backend engineering and scalable systems.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <article><h3>Holo</h3><p>Peer-to-peer file sharing.</p></article>
+            <article><h3>Copia</h3><p>Database built from scratch in Go.</p></article>
+            <article><h3>Jpeg Go</h3><p>JPEG encoder and decoder in Go.</p></article>
+            <article><h3>Toraje</h3><p>Private ephemeral file sharing.</p></article>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>

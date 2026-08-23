@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Validation</title>
+    <style>
+        .error { color: red; }
+        input, textarea { display: block; margin: 5px 0 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Contact Mohammed Ufraan</h1>
+
+    <form id="contactForm">
+        <label>Name:</label>
+        <input type="text" id="name">
+        <span id="nameError" class="error"></span>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <span id="emailError" class="error"></span>
+
+        <label>Message:</label>
+        <textarea id="message"></textarea>
+        <span id="messageError" class="error"></span>
+
+        <button type="submit">Submit</button>
+        <p id="formError" class="error"></p>
+        <p id="success"></p>
+    </form>
+
+    <script>
+        const form = document.querySelector("#contactForm");
+        const name = document.querySelector("#name");
+        const email = document.querySelector("#email");
+        const message = document.querySelector("#message");
+
+        const nameRegex = /^[A-Za-z ]+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        function validate(input, regex, error, text) {
+            if (!input.value.trim())
+                throw new Error("Required fields cannot be empty.");
+            if (regex && !regex.test(input.value.trim())) {
+                document.querySelector(error).textContent = text;
+                return false;
+            }
+            document.querySelector(error).textContent = "";
+            return true;
+        }
+
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+
+            try {
+                document.querySelector("#formError").textContent = "";
+                document.querySelector("#success").textContent = "";
+
+                const validName = validate(
+                    name, nameRegex, "#nameError", "Enter a valid name."
+                );
+
+                const validEmail = validate(
+                    email, emailRegex, "#emailError", "Enter a valid email."
+                );
+
+                if (message.value.trim().length < 10) {
+                    document.querySelector("#messageError").textContent =
+                        "Message must contain at least 10 characters.";
+                } else {
+                    document.querySelector("#messageError").textContent = "";
+                }
+
+                if (validName && validEmail && message.value.trim().length >= 10)
+                    document.querySelector("#success").textContent =
+                        "Form submitted successfully!";
+
+            } catch (error) {
+                console.error(error);
+                document.querySelector("#formError").textContent =
+                    "Please fill in all required fields correctly.";
+            } finally {
+                console.log("Validation completed.");
+            }
+        });
+
+        if (new URLSearchParams(location.search).has("demo")) {
+            name.value = "123";
+            email.value = "abc";
+            message.value = "";
+            form.dispatchEvent(new Event("submit"));
+        }
+    </script>
+
+</body>
+</html>

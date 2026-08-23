@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+header {
+    padding: 12px;
+    background: #222;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+nav a { color: white; }
+
+section {
+    max-width: 900px;
+    margin: 6px auto;
+    padding: 10px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+article {
+    padding: 15px;
+    border: 1px solid #aaa;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea, button {
+    padding: 8px;
+}
+
+.dark {
+    background: #d3d3d3;
+    color: #222;
+    min-height: 100vh;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basics — Output</title>
+    <style>
+        body {
+            font-family: ui-monospace, Menlo, monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 16px;
+            color: #569cd6;
+            margin: 0 0 12px;
+        }
+        #output div {
+            padding: 2px 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Basics — Console Output</h1>
+    <div id="output"></div>
+
+    <script>
+        const out = document.getElementById("output");
+        const origLog = console.log;
+        console.log = (...args) => {
+            const line = document.createElement("div");
+            line.textContent = args
+                .map(a => typeof a === "object" ? JSON.stringify(a) : String(a))
+                .join(" ");
+            out.appendChild(line);
+            origLog(...args);
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
