@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab Outputs</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", sans-serif;
+  background: #fff;
+  color: #0d0d0d;
+  padding: 48px 24px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 960px; margin: 0 auto; }
+h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: #8e8e93; margin-bottom: 48px; }
+.experiment { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid #e8e8ed; }
+.experiment:last-child { border-bottom: none; }
+.experiment-header { margin-bottom: 16px; }
+.experiment-header a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0d0d0d;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.experiment-header a:hover { color: #0071e3; }
+.experiment-header span { font-size: 13px; color: #8e8e93; font-weight: 400; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; }
+.card {
+  background: #f5f5f7;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+.card:hover { background: #e8e8ed; }
+.card-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.card-image img { width: 100%; height: auto; display: block; cursor: zoom-in; }
+.card-body {
+  padding: 10px 14px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+.card-body span { font-size: 12px; color: #1c1c1e; font-weight: 500; }
+.card-body a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #0071e3;
+  font-weight: 500;
+  padding: 4px 0;
+  transition: color 0.15s ease;
+}
+.card-body a:hover { color: #004c99; }
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 100;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 24px;
+}
+.modal.open { display: flex; }
+.modal img {
+  max-width: 60vw;
+  max-height: 60vh;
+  border-radius: 8px;
+  cursor: default;
+}
+.close-btn {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+  line-height: 1;
+  background: none;
+  border: none;
+}
+.close-btn:hover { opacity: 1; }
+
+@media (max-width: 600px) {
+  body { padding: 24px 16px; }
+  .grid { grid-template-columns: 1fr; }
+  .modal img { max-width: 90vw; max-height: 70vh; }
+}
+</style>
+<script>
+document.addEventListener('click', function(e) {
+  var img = e.target.closest('.card-image img');
+  if (!img) return;
+  var modal = document.getElementById('modal');
+  var modalImg = document.getElementById('modal-img');
+  modalImg.src = img.src;
+  modal.classList.add('open');
+});
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+</script>
+</head>
+<body>
+<div class="container">
+
+<h1>Full Stack Web Development Lab</h1>
+<p class="subtitle">Experiment outputs</p>
+
+<div class="experiment">
+<div class="experiment-header"><a href="#">Experiment 1</a> <span>&mdash; HTML Basics</span></div>
+<div class="grid">
+<div class="card"><div class="card-image"><img src="../output/exp1-01.png" alt="Portfolio page structure"></div><div class="card-body"><span>Portfolio page structure</span><a href="../output/exp1-01.png" download>Download</a></div></div>
+</div></div>
+
+<div class="experiment">
+<div class="experiment-header"><a href="#">Experiment 2</a> <span>&mdash; CSS Styling</span></div>
+<div class="grid">
+<div class="card"><div class="card-image"><img src="../output/exp2-01.png" alt="Portfolio page with CSS"></div><div class="card-body"><span>Portfolio page with CSS</span><a href="../output/exp2-01.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp2-02.png" alt="Responsiveness"></div><div class="card-body"><span>Responsiveness</span><a href="../output/exp2-02.png" download>Download</a></div></div>
+</div></div>
+
+<div class="experiment">
+<div class="experiment-header"><a href="#">Experiment 3</a> <span>&mdash; JavaScript Basics</span></div>
+<div class="grid">
+<div class="card"><div class="card-image"><img src="../output/exp3-01.png" alt="Console output"></div><div class="card-body"><span>Console output</span><a href="../output/exp3-01.png" download>Download</a></div></div>
+</div></div>
+
+<div class="experiment">
+<div class="experiment-header"><a href="#">Experiment 4</a> <span>&mdash; DOM Manipulation</span></div>
+<div class="grid">
+<div class="card"><div class="card-image"><img src="../output/exp4-01.png" alt="Light theme"></div><div class="card-body"><span>Light theme</span><a href="../output/exp4-01.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp4-02.png" alt="Dark theme"></div><div class="card-body"><span>Dark theme</span><a href="../output/exp4-02.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp4-03.png" alt="Session storage — theme key/value"></div><div class="card-body"><span>Session storage — theme key</span><a href="../output/exp4-03.png" download>Download</a></div></div>
+</div></div>
+
+<div class="experiment">
+<div class="experiment-header"><a href="#">Experiment 5</a> <span>&mdash; Form Validation</span></div>
+<div class="grid">
+<div class="card"><div class="card-image"><img src="../output/exp5-01.png" alt="Contact form"></div><div class="card-body"><span>Contact form</span><a href="../output/exp5-01.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp5-02.png" alt="Validation errors"></div><div class="card-body"><span>Validation errors</span><a href="../output/exp5-02.png" download>Download</a></div></div>
+</div></div>
+
+<div class="experiment">
+<div class="experiment-header"><a href="#">Experiment 6</a> <span>&mdash; Fetch API (GitHub)</span></div>
+<div class="grid">
+<div class="card"><div class="card-image"><img src="../output/exp6-01.png" alt="Site view"></div><div class="card-body"><span>Site view</span><a href="../output/exp6-01.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp6-02.png" alt="Failed fetch"></div><div class="card-body"><span>Failed fetch</span><a href="../output/exp6-02.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp6-03.png" alt="Network tab — request headers & URL"></div><div class="card-body"><span>Network tab — headers &amp; URL</span><a href="../output/exp6-03.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp6-04.png" alt="Network tab — response JSON"></div><div class="card-body"><span>Network tab — response JSON</span><a href="../output/exp6-04.png" download>Download</a></div></div>
+</div></div>
+
+<div class="experiment">
+<div class="experiment-header"><a href="#">Experiment 7</a> <span>&mdash; React Portfolio</span></div>
+<div class="grid">
+<div class="card"><div class="card-image"><img src="../output/exp7-01.png" alt="Light theme"></div><div class="card-body"><span>Light theme</span><a href="../output/exp7-01.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp7-02.png" alt="Dark theme"></div><div class="card-body"><span>Dark theme</span><a href="../output/exp7-02.png" download>Download</a></div></div>
+<div class="card"><div class="card-image"><img src="../output/exp7-03.png" alt="Terminal — npm run dev"></div><div class="card-body"><span>Terminal — npm run dev</span><a href="../output/exp7-03.png" download>Download</a></div></div>
+</div></div>
+
+</div>
+
+<div id="modal" class="modal" onclick="closeModal()">
+  <button class="close-btn" onclick="closeModal()">&times;</button>
+  <img id="modal-img" src="" onclick="event.stopPropagation()" alt="Preview">
+</div>
+
+</body>
+</html>
