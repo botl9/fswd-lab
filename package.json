@@ -1,0 +1,21 @@
+{
+  "name": "fswd-lab-exps",
+  "version": "1.0.0",
+  "description": "> [!IMPORTANT] > **[view all experiment outputs here →](https://fswd-outputs.ufraan.dev/)**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ufraaan/fswd-exps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ufraaan/fswd-exps/issues"
+  },
+  "homepage": "https://github.com/ufraaan/fswd-exps#readme"
+}

@@ -1,0 +1,2 @@
+Hello from Node.js!
+This file is read asynchronously.
