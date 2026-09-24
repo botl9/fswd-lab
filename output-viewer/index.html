@@ -110,6 +110,20 @@ h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 
 }
 .close-btn:hover { opacity: 1; }
 
+.record-btn {
+  display: inline-block;
+  margin: 0 0 40px;
+  padding: 10px 18px;
+  background: #0071e3;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  letter-spacing: -0.01em;
+}
+.record-btn:hover { background: #004c99; }
+
 @media (max-width: 600px) {
   body { padding: 24px 16px; }
   .grid { grid-template-columns: 1fr; }
@@ -138,6 +152,8 @@ document.addEventListener('keydown', function(e) {
 
 <h1>Full Stack Web Development Lab</h1>
 <p class="subtitle">Experiment outputs</p>
+
+<p><a class="record-btn" href="fswd-full-record.pdf" download>Download full handwritten record (PDF)</a></p>
 
 <div class="experiment">
 <div class="experiment-header"><a href="#">Experiment 1</a> <span>&mdash; HTML Basics</span></div>
