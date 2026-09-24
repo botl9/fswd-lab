@@ -16,5 +16,10 @@ full ftack web development lab - experiment code and output screenshots.
 | 5 | form validation | [index.html](exp05/index.html) | [ss 1](output-viewer/output/exp5-01.png) · [ss 2](output-viewer/output/exp5-02.png) |
 | 6 | fetch API (github) | [index.html](exp06/index.html) · [script.js](exp06/script.js) | [ss 1](output-viewer/output/exp6-01.png) · [ss 2](output-viewer/output/exp6-02.png) · [ss 3](output-viewer/output/exp6-03.png) · [ss 4](output-viewer/output/exp6-04.png) |
 | 7 | react portfolio | [main.tsx](exp07/main.tsx) · [App](exp07/src/main.jsx) | [ss 1](output-viewer/output/exp7-01.png) · [ss 2](output-viewer/output/exp7-02.png) · [ss 3](output-viewer/output/exp7-03.png) |
+| 8 | node.js server | [server.js](exp08/server.js) · [data.txt](exp08/data.txt) | [ss 1](output-viewer/output/exp8-01.png) · [ss 2](output-viewer/output/exp8-02.png) · [ss 3](output-viewer/output/exp8-03.png) |
+| 9 | express + cors API | [server.js](exp09/server.js) · [ContactForm.jsx](exp09/ContactForm.jsx) | [ss 1](output-viewer/output/exp9-01.png) · [ss 2](output-viewer/output/exp9-02.png) · [ss 3](output-viewer/output/exp9-03.png) · [ss 4](output-viewer/output/exp9-04.png) |
+| 10 | mongodb + mongoose | [server.js](exp10/server.js) | [ss 1](output-viewer/output/exp-10-1.png) · [ss 2](output-viewer/output/exp-10-2.png) · [ss 3](output-viewer/output/exp-10-3.png) · [ss 4](output-viewer/output/exp-10-4.png) · [ss 5](output-viewer/output/exp-10-5.png) · [ss 6](output-viewer/output/exp-10-6.png) |
+| 11 | mern portfolio | [App.jsx](exp11/client/src/App.jsx) · [server.js](exp11/server/server.js) | [ss 1](output-viewer/output/exp-11-1.png) · [ss 2](output-viewer/output/exp-11-2.png) · [ss 3](output-viewer/output/exp-11-3.png) · [ss 4](output-viewer/output/exp-11-4.png) · [ss 5](output-viewer/output/exp-11-5.png) · [ss 6](output-viewer/output/exp-11-6.png) |
 
 > exp 07 is a vite + react app: `cd exp07 && npm install && npm run dev`
+> exp 11 is a mern app: `cd exp11/server && npm install && npm start` + `cd exp11/client && npm install && npm run dev`
