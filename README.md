@@ -20,6 +20,7 @@ full ftack web development lab - experiment code and output screenshots.
 | 9 | express + cors API | [server.js](exp09/server.js) · [ContactForm.jsx](exp09/ContactForm.jsx) | [ss 1](output-viewer/output/exp9-01.png) · [ss 2](output-viewer/output/exp9-02.png) · [ss 3](output-viewer/output/exp9-03.png) · [ss 4](output-viewer/output/exp9-04.png) |
 | 10 | mongodb + mongoose | [server.js](exp10/server.js) | [ss 1](output-viewer/output/exp-10-1.png) · [ss 2](output-viewer/output/exp-10-2.png) · [ss 3](output-viewer/output/exp-10-3.png) · [ss 4](output-viewer/output/exp-10-4.png) · [ss 5](output-viewer/output/exp-10-5.png) · [ss 6](output-viewer/output/exp-10-6.png) |
 | 11 | mern portfolio | [App.jsx](exp11/client/src/App.jsx) · [server.js](exp11/server/server.js) | [ss 1](output-viewer/output/exp-11-1.png) · [ss 2](output-viewer/output/exp-11-2.png) · [ss 3](output-viewer/output/exp-11-3.png) · [ss 4](output-viewer/output/exp-11-4.png) · [ss 5](output-viewer/output/exp-11-5.png) · [ss 6](output-viewer/output/exp-11-6.png) |
+| 12 | mern deployment | [server.js](exp12/server/server.js) · [App.jsx](exp12/client/src/App.jsx) | [live](https://fswd-live.ufraan.dev) · [api](https://fswd-api.ufraan.dev) |
 
 > exp 07 is a vite + react app: `cd exp07 && npm install && npm run dev`
 > exp 11 is a mern app: `cd exp11/server && npm install && npm start` + `cd exp11/client && npm install && npm run dev`
