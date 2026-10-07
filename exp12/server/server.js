@@ -45,6 +45,15 @@ app.post("/api/contacts", async (req, res) => {
     res.status(201).json(contact);
 });
 
+app.post("/api/projects", async (req, res) => {
+    try {
+        const project = await Project.create(req.body);
+        res.status(201).json(project);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
+});
+
 app.listen(process.env.PORT || 3000, () => {
     console.log("Server running");
 });
