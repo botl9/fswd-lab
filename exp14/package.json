@@ -1,0 +1,15 @@
+{
+  "name": "exp14-graphql-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Experiment 14 - developing a GraphQL API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "graphql": "^16.10.0",
+    "graphql-http": "^1.22.4"
+  }
+}

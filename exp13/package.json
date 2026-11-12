@@ -1,0 +1,13 @@
+{
+  "name": "exp13-rest-api-postman",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Experiment 13 - REST API testing using Postman",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
