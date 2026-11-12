@@ -4,3 +4,5 @@ node_modules/
 atlas-credentials.env
 *.log
 dist/
+exp13/package-lock.json
+exp14/package-lock.json
